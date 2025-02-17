@@ -2,3 +2,7 @@
 - Is there a difference in the flow of execution from when the code was in the setTimeout function?
 - Is the flow of execution in both these examples different from the flow of execution with the examples using the fetch() API, which also returns a promise? 
 - If yes, explain the code execution difference. Add your explanation to this file.
+
+There is a difference in flow. With "settimeout", the summing is deferred, but with "settimeiut", the summing logic executes immediately as part of the promise
+
+They are different. Fetch depends on network response and this flow happens or in the next event loop cycle, causing time difference.
